@@ -1,4 +1,4 @@
-# VERY SIMPLE Morphological-Analysis !
+# VERY SIMPLE Morphological-Analysis 4JP !
 
 ## You will need to pip-install Janome and Streamlit.
 This source code provides a very simple and easy to use web application using Streamlit.
