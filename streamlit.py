@@ -13,7 +13,7 @@ s2="吾輩は猫である。名前はもう有る。"
 arr1 =[]
 arr2 =[]
 
-st.sidebar.title('文章間')
+st.sidebar.title('コサイン類似度')
 st.title("２つの文章の類似度を確認します。")
 st.write("\n")
 
@@ -73,7 +73,7 @@ if (s1!="")&(s2!=""):
     
     def cos_sim(x, y):
         return np.dot(x, y) / (np.sqrt(np.sum(x**2)) * np.sqrt(np.sum(y**2)))
-    for i, v in enumerate(["コサイン類似度"]):
+    for i, v in enumerate(["："]):
         per = cos_sim(corpus[0], corpus[i + 1])
         st.sidebar.title(v + ":" + f"{per:.2}")
     st.sidebar.write('※出現回を考慮しないコサイン類似度として計算')
