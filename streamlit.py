@@ -73,7 +73,7 @@ if (s1!="")&(s2!=""):
     
     def cos_sim(x, y):
         return np.dot(x, y) / (np.sqrt(np.sum(x**2)) * np.sqrt(np.sum(y**2)))
-    for i, v in enumerate(["："]):
+    for i, v in enumerate([""]):
         per = cos_sim(corpus[0], corpus[i + 1])
         st.sidebar.title(v + ":" + f"{per:.2}")
     st.sidebar.write('※出現回を考慮しないコサイン類似度として計算')
