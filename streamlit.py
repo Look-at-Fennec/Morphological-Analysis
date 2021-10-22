@@ -13,7 +13,7 @@ s2="吾輩は猫である。名前はもう有る。"
 arr1 =[]
 arr2 =[]
 
-st.sidebar.title('極限までシンプルな')
+st.sidebar.title('文章間')
 st.title("２つの文章の類似度を確認します。")
 st.write("\n")
 
