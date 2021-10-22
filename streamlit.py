@@ -69,7 +69,7 @@ if (s1!="")&(s2!=""):
     
     if st.checkbox("show vector"):
         st.write(pd.DataFrame(corpus).T)
-        st.write("内積："+np.dot(corpus[0],corpus[1]))
+        st.write("内積：{}".format(np.dot(corpus[0],corpus[1])))
 
     
     def cos_sim(x, y):
