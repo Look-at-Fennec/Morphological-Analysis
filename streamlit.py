@@ -77,4 +77,4 @@ if (s1!="")&(s2!=""):
         per = cos_sim(corpus[0], corpus[i + 1])
         st.sidebar.title(v + ":" + f"{per:.2}")
     st.sidebar.write('※出現回を考慮しないコサイン類似度として計算')
-    st.sidebar.write('単語の出現のみに頼った単純な類似度判定がどのような性質を持つか体感してください。')
+  
