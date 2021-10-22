@@ -77,7 +77,8 @@ if (s1!="")&(s2!=""):
     for i, v in enumerate([""]):
         per = cos_sim(corpus[0], corpus[i + 1])
         st.sidebar.title(v + "コサイン類似度：" + f"{per:.2}")
-    st.sidebar.title("内積：" + f"{np.dot(x,y):.2}")
+        
+    st.sidebar.title(v + "内積：" + f"{np.dot(x,y):.2}")
     
     st.sidebar.write('※出現回を考慮しないコサイン類似度として計算')
   
