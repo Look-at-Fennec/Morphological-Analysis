@@ -63,13 +63,12 @@ if (s1!="")&(s2!=""):
                 index_to_word[new_index] = w
 
     corpus = np.zeros((len(Wlist), len(word_to_index)))
-
-    for i, s in enumerate(Wlist):
-        for w in s:
-            corpus[i, word_to_index[w]] = 1
     
     if st.checkbox("show vector"):
         st.write(pd.DataFrame(corpus).T)
+        for i, s in enumerate(Wlist):
+            for w in s:
+                corpus[i, word_to_index[w]] = 1
     
     def cos_sim(x, y):
         return np.dot(x, y) / (np.sqrt(np.sum(x**2)) * np.sqrt(np.sum(y**2)))
