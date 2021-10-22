@@ -68,7 +68,8 @@ if (s1!="")&(s2!=""):
             corpus[i, word_to_index[w]] = 1
     
     if st.checkbox("show vector"):
-        st.write(pd.DataFrame(corpus[1]).T)
+        st.write(pd.DataFrame(corpus[]).T)
+        st.write(np.dot(corpus[0],corpus[1]))
 
     
     def cos_sim(x, y):
