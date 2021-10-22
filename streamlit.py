@@ -68,7 +68,7 @@ if (s1!="")&(s2!=""):
             corpus[i, word_to_index[w]] = 1
     
     if st.checkbox("show vector"):
-        st.write(pd.DataFrame(corpus).T)
+        st.write(pd.DataFrame(corpus[1]).T)
 
     
     def cos_sim(x, y):
@@ -76,6 +76,6 @@ if (s1!="")&(s2!=""):
     for i, v in enumerate([""]):
         per = cos_sim(corpus[0], corpus[i + 1])
         st.sidebar.title(v + "コサイン類似度：" + f"{per:.2}")
-    
+        
     st.sidebar.write('※出現回を考慮しないコサイン類似度として計算')
   
