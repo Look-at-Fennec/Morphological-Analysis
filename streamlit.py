@@ -14,8 +14,6 @@ arr1 =[]
 arr2 =[]
 
 st.sidebar.title('極限までシンプルな')
-st.sidebar.title('形態素解析・構文解析')
-st.sidebar.title('体験ページ')
 st.title("２つの文章の類似度を確認します。")
 st.write("\n")
 
@@ -46,7 +44,7 @@ if s2!="":
             st.write("...")
         count_word_2 += 1
 st.write("この文章は{}個の品詞と{}個の記号で構成されています。".format(count_word_2,count_symbol_2))
-st.title("分解表とワンホットベクトル")
+st.title("分解表と分散表現")
     
 if (s1!="")&(s2!=""):
     df_1 = pd.DataFrame({'1st_sentence':arr1})
@@ -70,12 +68,12 @@ if (s1!="")&(s2!=""):
         for w in s:
             corpus[i, word_to_index[w]] = 1
     
-    if st.checkbox("show one-hot vec"):
+    if st.checkbox("show vector"):
         st.write(pd.DataFrame(corpus).T)
     
     def cos_sim(x, y):
         return np.dot(x, y) / (np.sqrt(np.sum(x**2)) * np.sqrt(np.sum(y**2)))
-    for i, v in enumerate(["類似度"]):
+    for i, v in enumerate(["コサイン類似度"]):
         per = cos_sim(corpus[0], corpus[i + 1])
         st.sidebar.title(v + ":" + f"{per:.2}")
     st.sidebar.write('※出現回を考慮しないコサイン類似度として計算')
