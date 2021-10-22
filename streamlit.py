@@ -68,7 +68,7 @@ if (s1!="")&(s2!=""):
             corpus[i, word_to_index[w]] = 1
     
     if st.checkbox("show vector"):
-        st.write(pd.DataFrame(corpus).T)
+        st.write(pd.DataFrame(corpus))
         st.write("内積：{}".format(np.dot(corpus[0],corpus[1])))
 
     
